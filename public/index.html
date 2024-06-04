@@ -43,8 +43,11 @@
         }
 
         .box.red {
-            background-color: red;
+            background-color: #ffff00; /* Change to yellow */
             animation: fadeToWhite 2s linear forwards;
+        }
+        .box.green {
+            background-color: #00ff00; /* Add green color for dot */
         }
 
         .box.blue {
@@ -165,7 +168,7 @@
                 }, 0);
             }
             const redBox = getRandomBox();
-            redBox.classList.add("red");
+            redBox.classList.add("green"); // Change to green class
             redBoxTimeout = setTimeout(() => {
                 setNewRedBox();
                 resetScore();

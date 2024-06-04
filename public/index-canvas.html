@@ -78,7 +78,7 @@
             const elapsedTime = currentTime - startTime;
             const progress = Math.min(elapsedTime / duration, 1);
 
-            const startColor = [255, 0, 0]; // RGB for red
+            const startColor = [255, 255, 0]; // RGB for yellow
             const endColor = [255, 255, 255]; // RGB for white
             const currentColor = startColor.map((start, index) => Math.round(start + (endColor[index] - start) * progress));
 
@@ -98,7 +98,7 @@
         function resetRedBox() {
             clearTimeout(redBoxTimer);
             if (redBox.x !== -1 && redBox.y !== -1) {
-                drawBox(redBox.x, redBox.y, '#ffffff');
+                drawBox(redBox.x, redBox.y, '#00ff00'); // Draw new red box as green
             }
             redBox.x = Math.floor(Math.random() * (gridColumns - 1));
             redBox.y = Math.floor(Math.random() * (gridRows - 1));
